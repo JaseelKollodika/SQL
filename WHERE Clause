@@ -21,3 +21,9 @@ WHERE birth_date > '1985-01-10'
 AND gender = 'male';
 
 # AND OR NOT -- Logical Operators
+
+SELECT * FROM parks_and_recreation.employee_demographics
+WHERE (first_name = 'Tom' AND Age > 30) OR Age > 60;
+
+
+
