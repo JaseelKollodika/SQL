@@ -1,0 +1,17 @@
+#WHERE Clause
+Show databases;
+Use parks_and_recreation;
+Show Tables;
+
+SELECT*FROM parks_and_recreation.employee_salary;
+
+SELECT*FROM employee_salary 
+WHERE Salary=50000;
+
+
+SELECT*FROM parks_and_recreation.employee_demographics
+WHERE age between 43 and 61;
+
+Desc employee_demographics;
+select*from employee_demographics
+Where employee_id = 10;
