@@ -1,0 +1,32 @@
+# AND OR NOT -- Logical Operators
+
+SELECT * FROM parks_and_recreation.employee_demographics
+WHERE birth_date > '1985-01-10'
+AND gender = 'male';
+
+SELECT * FROM parks_and_recreation.employee_demographics
+WHERE (first_name = 'Tom' AND Age > 30) OR Age > 60;
+
+# LIKE STATEMENT
+
+# two special characters a % and a _
+
+# % means anything
+#This query retrieves all columns from the employee_demographics table for employees whose first name starts with the letter 'A'. 
+#The LIKE 'a%' condition matches any first name that begins with 'A' followed by zero or more characters.
+
+SELECT *
+FROM employee_demographics
+WHERE first_name LIKE 'a%';  
+
+# _ means a specific value
+# The letter 'A' must be the first character. Two underscores after 'A' ensure that only names with exactly three characters (including 'A') are returned.
+
+SELECT *
+FROM employee_demographics
+WHERE first_name LIKE 'a__';
+
+
+SELECT *
+FROM employee_demographics
+WHERE first_name LIKE 'a___%';
